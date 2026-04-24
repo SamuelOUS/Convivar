@@ -1,0 +1,12 @@
+[
+  {
+    "id": "seed-admin-user",
+    "email": "admin@convivar.com",
+    "fullName": "Administrador Convivar",
+    "passwordHash": "$2b$10$1XbO98UcxXXO2m7O/MlkNO1F5POhhlCsMFKkES/7Jh7kcNe3b7BEK",
+    "provider": "credentials",
+    "role": "Administrador",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  }
+]
