@@ -1,0 +1,55 @@
+.form,
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  gap: 20px;
+}
+
+.header {
+  gap: 10px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #2f8f72;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.title,
+.subtitle {
+  margin: 0;
+}
+
+.title {
+  color: #163b34;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 0.98;
+}
+
+.subtitle {
+  color: #44625b;
+  line-height: 1.6;
+}
+
+.submitButton {
+  border: none;
+  border-radius: 16px;
+  padding: 15px 18px;
+  background: linear-gradient(135deg, #184e44, #2f8f72);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 18px 36px rgba(24, 78, 63, 0.18);
+}
+
+.submitButton:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}

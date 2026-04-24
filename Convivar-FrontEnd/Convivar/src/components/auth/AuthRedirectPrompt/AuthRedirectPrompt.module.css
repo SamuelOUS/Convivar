@@ -1,0 +1,10 @@
+.prompt {
+  margin: 0;
+  color: #5b716a;
+}
+
+.prompt a {
+  color: #24755d;
+  font-weight: 700;
+  text-decoration: none;
+}

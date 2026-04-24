@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #4f655f;
+  font-size: 0.92rem;
+}
+
+.input {
+  width: 16px;
+  height: 16px;
+  accent-color: #2f8f72;
+}
+
+.label {
+  line-height: 1.5;
+}
+
+.errorMessage {
+  color: #b03838;
+  font-size: 0.84rem;
+}

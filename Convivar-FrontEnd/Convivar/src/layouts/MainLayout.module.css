@@ -1,0 +1,20 @@
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: linear-gradient(180deg, #f4faf7 0%, #f7f4ea 100%);
+}
+
+.content {
+  padding: 28px;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
