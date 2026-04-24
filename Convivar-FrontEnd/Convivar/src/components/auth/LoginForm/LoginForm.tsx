@@ -99,30 +99,16 @@ function LoginForm({
 
   return (
     <form className={styles.form} noValidate onSubmit={handleSubmit}>
+
       <div className={styles.header}>
         <p className={styles.eyebrow}>Acceso seguro</p>
         <h2 className={styles.title}>Inicia sesion en Convivar</h2>
         <p className={styles.subtitle}>
-          Accede al panel administrativo con correo, contrasena o Google.
+          Accede al panel administrativo con correo, contraseña o Google.
         </p>
       </div>
 
-      <div className={styles.demoCard}>
-        <p className={styles.demoTitle}>Credenciales demo</p>
-        <p className={styles.demoLine}>
-          Usuario: <strong>{demoCredentials.email}</strong>
-        </p>
-        <p className={styles.demoLine}>
-          Clave: <strong>{demoCredentials.password}</strong>
-        </p>
-        <button className={styles.secondaryButton} onClick={fillDemoCredentials} type="button">
-          Usar credenciales de prueba
-        </button>
-      </div>
 
-      <SocialAuthButton mode="login" onCredential={handleGoogleCredential} />
-
-      <AuthDivider label="o inicia con tu cuenta" />
 
       <AuthField
         autoComplete="email"
@@ -141,25 +127,27 @@ function LoginForm({
         error={errors.password}
         hint="Si luego llega un backend real, este campo ya esta listo para conectarse al endpoint de login."
         id="login-password"
-        label="Contrasena"
+        label="Contraseña"
         name="password"
         onChange={handleChange}
-        placeholder="Ingresa tu contrasena"
+        placeholder="Ingresa tu contraseña"
         type="password"
         value={credentials.password}
       />
 
       <div className={styles.utilityRow}>
+
         <AuthCheckbox
           checked={credentials.rememberSession}
           id="login-rememberSession"
           label="Mantener sesion iniciada"
           name="rememberSession"
           onChange={handleChange}
-        />
+          />
         <button className={styles.inlineLink} type="button">
-          Olvide mi contrasena
+          Olvide mi contraseña
         </button>
+        
       </div>
 
       {submitError ? <AuthStatusMessage message={submitError} /> : null}
@@ -168,12 +156,33 @@ function LoginForm({
         {isSubmitting ? "Validando..." : "Entrar al panel"}
       </button>
 
-      <AuthRedirectPrompt
-        ctaLabel="Crear cuenta"
-        text="Aun no tienes cuenta?"
-        to="/registro"
-      />
+        <AuthRedirectPrompt
+          ctaLabel="Crear cuenta"
+          text="Aun no tienes cuenta?"
+          to="/registro"
+          
+          />
+
+      <AuthDivider label="o inicia con tu cuenta de google" />
+
+      <SocialAuthButton mode="login" onCredential={handleGoogleCredential} />
+
+      <br />
+        
+      <div className={styles.demoCard}>
+        <p className={styles.demoTitle}>Credenciales demo</p>
+        <p className={styles.demoLine}>
+          Usuario: <strong>{demoCredentials.email}</strong>
+        </p>
+        <p className={styles.demoLine}>
+          Clave: <strong>{demoCredentials.password}</strong>
+        </p>
+        <button className={styles.secondaryButton} onClick={fillDemoCredentials} type="button">
+          Usar credenciales de prueba
+        </button>
+      </div>
     </form>
+    
   );
 }
 

@@ -44,10 +44,11 @@ function SocialAuthButton({
         type: "standard",
         theme: "outline",
         size: "large",
-        shape: "rectangular",
+        shape: "pill",
         text: mode === "register" ? "signup_with" : "signin_with",
         logo_alignment: "left",
         width: "320",
+        
       });
     }
 
