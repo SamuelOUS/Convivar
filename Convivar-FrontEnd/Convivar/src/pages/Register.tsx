@@ -14,7 +14,7 @@ function Register() {
 
     try {
       await register(data);
-      navigate("/", { replace: true });
+      navigate("/conjuntos", { replace: true });
     } finally {
       setIsSubmitting(false);
     }
@@ -23,7 +23,7 @@ function Register() {
   async function handleGoogleRegister(payload: GoogleAuthPayload): Promise<void> {
     try {
       await registerWithGoogle(payload);
-      navigate("/", { replace: true });
+      navigate("/conjuntos", { replace: true });
     } finally {
       // GIS maneja el popup y el retorno de la credencial.
     }

@@ -7,6 +7,7 @@ import type {
 } from "../types/auth";
 
 export type AuthContextValue = {
+  authToken: string | null;
   currentUser: AuthUser | null;
   isAuthenticated: boolean;
   isBootstrapping: boolean;

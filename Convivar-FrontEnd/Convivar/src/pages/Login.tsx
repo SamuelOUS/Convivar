@@ -13,7 +13,7 @@ function Login() {
   function redirectAfterAuth(): void {
     const targetPath = (location.state as { from?: { pathname?: string } } | null)
       ?.from?.pathname;
-    navigate(targetPath ?? "/", { replace: true });
+    navigate(targetPath ?? "/conjuntos", { replace: true });
   }
 
   async function handleLogin(credentials: LoginCredentials): Promise<void> {

@@ -1,4 +1,5 @@
 import type { NavigationItem } from "../types/navigation";
+import { useResidentialComplex } from "../hooks/useResidentialComplex";
 import styles from "./SectionPage.module.css";
 
 type SectionPageProps = {
@@ -7,6 +8,7 @@ type SectionPageProps = {
 
 function SectionPage({ item }: SectionPageProps) {
   const Icon = item.icon;
+  const { selectedComplex } = useResidentialComplex();
 
   return (
     <section className={styles.page}>
@@ -17,15 +19,18 @@ function SectionPage({ item }: SectionPageProps) {
         <div>
           <p className={styles.eyebrow}>Modulo</p>
           <h1>{item.label}</h1>
-          <p>{item.description}</p>
+          <p>
+            {item.description} Contexto activo: {selectedComplex?.name}.
+          </p>
         </div>
       </div>
 
       <div className={styles.card}>
-        <h2>Espacio preparado para crecer</h2>
+        <h2>Gestion de {selectedComplex?.name}</h2>
         <p>
           Esta vista queda lista para incorporar tablas, filtros, formularios y
-          widgets sin mezclar la estructura del modulo con la navegacion global.
+          widgets propios de este conjunto residencial sin mezclar sus datos con
+          otros conjuntos administrados.
         </p>
       </div>
     </section>

@@ -9,7 +9,7 @@ function PublicRoute() {
   }
 
   if (isAuthenticated) {
-    return <Navigate replace to="/" />;
+    return <Navigate replace to="/conjuntos" />;
   }
 
   return <Outlet />;

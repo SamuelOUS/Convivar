@@ -1,0 +1,256 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  align-content: start;
+  gap: 24px;
+  padding: 32px;
+  background: linear-gradient(180deg, #f4faf7 0%, #f7f4ea 100%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(24, 56, 48, 0.08);
+  box-shadow: 0 18px 36px rgba(24, 56, 48, 0.05);
+}
+
+.header h1,
+.header p,
+.card h2,
+.card p {
+  margin: 0;
+}
+
+.header h1 {
+  max-width: 760px;
+  margin-bottom: 10px;
+  color: #17372f;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.05;
+}
+
+.header p {
+  color: #5b7069;
+  line-height: 1.65;
+}
+
+.eyebrow {
+  margin-bottom: 10px;
+  color: #2f8f72;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+.grid {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.stateMessage,
+.errorMessage {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #36594f;
+  border: 1px solid rgba(24, 56, 48, 0.08);
+}
+
+.errorMessage {
+  background: #fff6f5;
+  color: #9b2f20;
+  border-color: rgba(155, 47, 32, 0.16);
+}
+
+.card {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid rgba(24, 56, 48, 0.08);
+  box-shadow: 0 18px 34px rgba(24, 56, 48, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.iconWrap {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: rgba(47, 143, 114, 0.12);
+  color: #1f6c57;
+}
+
+.status {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #edf7f2;
+  color: #1f6c57;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.card h2 {
+  color: #17372f;
+  font-size: 1.35rem;
+}
+
+.address,
+.admin {
+  color: #5b7069;
+  line-height: 1.55;
+}
+
+.admin {
+  font-weight: 700;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.metrics span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f6faf8;
+  color: #36594f;
+  font-size: 0.9rem;
+}
+
+.selectButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background: #1f6c57;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.selectButton:hover {
+  background: #185846;
+}
+
+.createPanel {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+  padding: 26px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(24, 56, 48, 0.08);
+  box-shadow: 0 18px 34px rgba(24, 56, 48, 0.05);
+}
+
+.createPanel h2,
+.createPanel p {
+  margin: 0;
+}
+
+.createPanel h2 {
+  margin-bottom: 8px;
+  color: #17372f;
+}
+
+.createPanel p {
+  color: #5b7069;
+  line-height: 1.6;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.form label {
+  display: grid;
+  gap: 7px;
+  color: #36594f;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.form input,
+.form select {
+  min-height: 44px;
+  border: 1px solid rgba(24, 56, 48, 0.16);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #17372f;
+  background: #fbfdfc;
+}
+
+.createButton {
+  align-self: end;
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background: #1f6c57;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.createButton:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.createButton:hover:not(:disabled) {
+  background: #185846;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 18px;
+  }
+
+  .header {
+    padding: 22px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+}

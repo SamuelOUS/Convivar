@@ -101,11 +101,13 @@ function LoginForm({
     <form className={styles.form} noValidate onSubmit={handleSubmit}>
 
       <div className={styles.header}>
+
         <p className={styles.eyebrow}>Acceso seguro</p>
         <h2 className={styles.title}>Inicia sesion en Convivar</h2>
         <p className={styles.subtitle}>
           Accede al panel administrativo con correo, contraseña o Google.
         </p>
+        
       </div>
 
 

@@ -78,6 +78,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
   }
 
   const value: AuthContextValue = {
+    authToken: session?.token ?? null,
     currentUser: session?.user ?? null,
     isAuthenticated: Boolean(session),
     isBootstrapping,
