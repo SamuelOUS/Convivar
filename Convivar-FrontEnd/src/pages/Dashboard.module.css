@@ -1,0 +1,101 @@
+.page {
+  display: grid;
+  gap: 24px;
+}
+
+.hero {
+  padding: 32px;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at top right, rgba(241, 206, 128, 0.28), transparent 30%),
+    linear-gradient(135deg, rgba(47, 143, 114, 0.9), rgba(22, 68, 57, 0.92));
+  color: white;
+}
+
+.hero h1,
+.hero p {
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  line-height: 1.08;
+}
+
+.eyebrow {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.description {
+  margin-top: 10px;
+  max-width: 62ch;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  padding: 22px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid rgba(20, 61, 52, 0.08);
+  box-shadow: 0 20px 34px rgba(20, 61, 52, 0.06);
+}
+
+.card h2,
+.card p {
+  margin: 0;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #17372f;
+}
+
+.card p {
+  color: #5b7069;
+  line-height: 1.65;
+}
+
+.cardIcon {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: rgba(47, 143, 114, 0.12);
+  color: #1f6c57;
+}
+
+@media (max-width: 560px) {
+  .page {
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 22px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}

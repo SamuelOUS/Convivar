@@ -1,0 +1,380 @@
+.page {
+  display: grid;
+  gap: 20px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(47, 143, 114, 0.14), rgba(241, 236, 221, 0.8));
+}
+
+.iconWrap {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background: #1f6c57;
+  color: white;
+}
+
+.hero h1,
+.hero p,
+.importPanel h2,
+.importPanel p,
+.editPanel h2,
+.tableHeader h2,
+.tableHeader p {
+  margin: 0;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #2f8f72;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+.hero h1,
+.tableHeader h2,
+.importPanel h2 {
+  color: #183830;
+}
+
+.hero p,
+.importPanel p {
+  color: #506962;
+  line-height: 1.7;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.summaryGrid article,
+.editPanel,
+.importPanel,
+.tableCard {
+  border: 1px solid rgba(24, 56, 48, 0.08);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 18px 34px rgba(24, 56, 48, 0.05);
+}
+
+.summaryGrid article {
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+}
+
+.summaryGrid span {
+  color: #5a7069;
+}
+
+.summaryGrid strong {
+  color: #17372f;
+  font-size: 1.8rem;
+}
+
+.importPanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px;
+}
+
+.uploadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background: #1f6c57;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.searchBar,
+.filtersBar,
+.editPanel {
+  display: grid;
+  gap: 12px;
+}
+
+.searchBar {
+  grid-template-columns: auto minmax(180px, 1fr) auto auto;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f7faf8;
+  border: 1px solid rgba(24, 56, 48, 0.08);
+}
+
+.searchBar input,
+.filtersBar input,
+.filtersBar select,
+.editPanel input,
+.editPanel select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid rgba(24, 56, 48, 0.16);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #17372f;
+  background: white;
+}
+
+.searchBar button,
+.filtersBar button,
+.secondaryButton,
+.saveButton,
+.iconButton,
+.pagination button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(31, 108, 87, 0.2);
+  padding: 9px 12px;
+  color: #1f6c57;
+  background: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.searchBar button[type="submit"],
+.filtersBar button[type="submit"],
+.saveButton {
+  border-color: transparent;
+  color: white;
+  background: #1f6c57;
+}
+
+.filtersBar {
+  grid-template-columns: auto repeat(5, minmax(120px, 1fr)) auto;
+  align-items: end;
+  padding: 14px;
+  border-radius: 8px;
+  background: #fbfdfc;
+  border: 1px solid rgba(24, 56, 48, 0.08);
+}
+
+.filtersTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  color: #1f6c57;
+  font-weight: 800;
+}
+
+.filtersBar label {
+  display: grid;
+  gap: 6px;
+  color: #36594f;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.filterHint {
+  margin: 0;
+  color: #5a7069;
+  font-size: 0.92rem;
+}
+
+.editPanel {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 22px;
+}
+
+.editHeader {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.editPanel label {
+  display: grid;
+  gap: 7px;
+  color: #36594f;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.saveButton {
+  align-self: end;
+}
+
+.saveButton:disabled,
+.pagination button:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+}
+
+.uploadButton input {
+  display: none;
+}
+
+.statusMessage,
+.errorMessage,
+.emptyState {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #edf7f2;
+  color: #1f6c57;
+  border: 1px solid rgba(47, 143, 114, 0.14);
+}
+
+.errorMessage {
+  background: #fff6f5;
+  color: #9b2f20;
+  border-color: rgba(155, 47, 32, 0.16);
+}
+
+.emptyState {
+  background: #f7faf8;
+  color: #5a7069;
+}
+
+.tableCard {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  min-width: 0;
+}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.tableWrap table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+}
+
+.tableWrap th,
+.tableWrap td {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(24, 56, 48, 0.08);
+  color: #36594f;
+  text-align: left;
+  vertical-align: top;
+}
+
+.tableWrap th {
+  color: #17372f;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: #edf7f2;
+  color: #1f6c57;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.iconButton {
+  min-height: 34px;
+  padding: 7px 10px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #5a7069;
+}
+
+.pagination div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pagination .activePage {
+  border-color: transparent;
+  color: white;
+  background: #1f6c57;
+}
+
+@media (max-width: 760px) {
+  .hero,
+  .importPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 22px;
+  }
+
+  .importPanel {
+    display: grid;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .uploadButton {
+    width: 100%;
+  }
+
+  .searchBar,
+  .filtersBar {
+    grid-template-columns: 1fr;
+  }
+
+  .editPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .editHeader,
+  .pagination {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pagination div,
+  .secondaryButton,
+  .saveButton {
+    width: 100%;
+  }
+
+  .pagination button {
+    flex: 1;
+  }
+}

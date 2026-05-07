@@ -1,0 +1,88 @@
+.page {
+  display: grid;
+  gap: 24px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(47, 143, 114, 0.14), rgba(241, 236, 221, 0.8));
+}
+
+.iconWrap {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background: #1f6c57;
+  color: white;
+}
+
+.hero h1,
+.hero p,
+.card h2,
+.card p {
+  margin: 0;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  color: #2f8f72;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+  color: #183830;
+}
+
+.hero p {
+  color: #506962;
+  line-height: 1.7;
+}
+
+.card {
+  padding: 24px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid rgba(24, 56, 48, 0.08);
+  box-shadow: 0 18px 36px rgba(24, 56, 48, 0.05);
+}
+
+@media (max-width: 640px) {
+  .page {
+    gap: 16px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .iconWrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #183830;
+}
+
+.card p {
+  color: #5a7069;
+  line-height: 1.7;
+}

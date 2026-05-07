@@ -1,0 +1,113 @@
+.form,
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  gap: 20px;
+}
+
+.header {
+  gap: 10px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #2f8f72;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.title,
+.subtitle,
+.demoTitle,
+.demoLine {
+  margin: 0;
+}
+
+.title {
+  color: #163b34;
+  font-size: 2.4rem;
+  line-height: 0.98;
+}
+
+.subtitle,
+.demoLine {
+  color: #44625b;
+  line-height: 1.6;
+}
+
+.demoCard {
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(245, 250, 248, 0.9);
+  border: 1px solid rgba(47, 143, 114, 0.16);
+}
+
+.demoTitle {
+  margin-bottom: 10px;
+  color: #163b34;
+  font-weight: 700;
+}
+
+.secondaryButton,
+.inlineLink {
+  border: none;
+  background: transparent;
+  color: #24755d;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.secondaryButton {
+  margin-top: 12px;
+}
+
+.utilityRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.submitButton {
+  border: none;
+  border-radius: 8px;
+  padding: 15px 18px;
+  background: linear-gradient(135deg, #1e6b57, #2f8f72);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 18px 36px rgba(24, 78, 63, 0.18);
+}
+
+@media (max-width: 560px) {
+  .form {
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 1.9rem;
+    line-height: 1.05;
+  }
+
+  .utilityRow {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}
+
+.submitButton:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}

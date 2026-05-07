@@ -102,6 +102,51 @@ export class ResidentialComplexRepository {
     return row ? mapRowToResidentialComplex(row) : null;
   }
 
+  async findByIdForUser(
+    id: string,
+    userId: string,
+  ): Promise<ResidentialComplex | null> {
+    const result = await db.query<ResidentialComplexRow>(
+      `
+        SELECT
+          id,
+          user_id,
+          name,
+          address,
+          administrator,
+          status,
+          units,
+          residents,
+          collection_rate,
+          weekly_reservations,
+          open_maintenance,
+          created_at,
+          updated_at
+        FROM residential_complexes
+        WHERE id = $1 AND user_id = $2
+        LIMIT 1
+      `,
+      [id, userId],
+    );
+
+    const row = result.rows[0];
+    return row ? mapRowToResidentialComplex(row) : null;
+  }
+
+  async updateResidentsCount(
+    id: string,
+    residents: number,
+  ): Promise<void> {
+    await db.query(
+      `
+        UPDATE residential_complexes
+        SET residents = $2, updated_at = NOW()
+        WHERE id = $1
+      `,
+      [id, residents],
+    );
+  }
+
   async save(input: SaveResidentialComplexInput): Promise<ResidentialComplex> {
     const result = await db.query<ResidentialComplexRow>(
       `
