@@ -327,10 +327,7 @@ function ResidentsPage() {
           <span>Activos</span>
           <strong>{stats.active}</strong>
         </article>
-        <article>
-          <span>Unidades relacionadas</span>
-          <strong>{stats.units}</strong>
-        </article>
+
         <article>
           <span>Inactivos</span>
           <strong>{stats.inactive}</strong>

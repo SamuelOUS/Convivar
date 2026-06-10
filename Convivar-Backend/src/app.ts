@@ -6,6 +6,7 @@ import { AuthController } from "./controllers/AuthController.js";
 import { FinanceController } from "./controllers/FinanceController.js";
 import { ResidentController } from "./controllers/ResidentController.js";
 import { ResidentialComplexController } from "./controllers/ResidentialComplexController.js";
+import { UnitController } from "./controllers/UnitController.js";
 import { errorHandler } from "./middlewares/errorHandler.js";
 import { notFoundHandler } from "./middlewares/notFoundHandler.js";
 import { ResidentialComplexRepository } from "./repositories/ResidentialComplexRepository.js";
@@ -16,6 +17,7 @@ import { createAuthRouter } from "./routes/auth.routes.js";
 import { createFinanceRouter } from "./routes/finance.routes.js";
 import { createResidentRouter } from "./routes/resident.routes.js";
 import { createResidentialComplexRouter } from "./routes/residentialComplex.routes.js";
+import { createUnitRouter } from "./routes/unit.routes.js";
 import { AuthService } from "./services/AuthService.js";
 import { FinanceService } from "./services/FinanceService.js";
 import { GoogleTokenVerifier } from "./services/GoogleTokenVerifier.js";
@@ -23,6 +25,7 @@ import { JwtService } from "./services/JwtService.js";
 import { PasswordService } from "./services/PasswordService.js";
 import { ResidentService } from "./services/ResidentService.js";
 import { ResidentialComplexService } from "./services/ResidentialComplexService.js";
+import { UnitService } from "./services/UnitService.js";
 
 const userRepository = new UserRepository();
 const passwordService = new PasswordService();
@@ -48,12 +51,17 @@ const financeService = new FinanceService(
   financeRepository,
   residentialComplexRepository,
 );
+const unitService = new UnitService(
+  financeRepository,
+  residentialComplexRepository,
+);
 const authController = new AuthController(authService);
 const residentialComplexController = new ResidentialComplexController(
   residentialComplexService,
 );
 const residentController = new ResidentController(residentService);
 const financeController = new FinanceController(financeService);
+const unitController = new UnitController(unitService);
 
 export function createApp() {
   const app = express();
@@ -98,6 +106,7 @@ export function createApp() {
   );
   app.use("/api", createResidentRouter(residentController));
   app.use("/api", createFinanceRouter(financeController));
+  app.use("/api", createUnitRouter(unitController));
   app.use(notFoundHandler);
   app.use(errorHandler);
 

@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ResidentsPage from "./pages/ResidentsPage";
 import SectionPage from "./pages/SectionPage";
+import UnitsPage from "./pages/UnitsPage";
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function App() {
                         <ResidentsPage />
                       ) : item.path === "/finanzas" ? (
                         <FinancePage />
+                      ) : item.path === "/unidades" ? (
+                        <UnitsPage />
                       ) : (
                         <SectionPage item={item} />
                       )

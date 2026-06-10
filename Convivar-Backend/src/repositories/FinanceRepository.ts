@@ -60,7 +60,6 @@ export class FinanceRepository {
           NOW()
         FROM residents
         WHERE residential_complex_id = $1
-          AND status = 'Activo'
         GROUP BY residential_complex_id, unit_label
         ON CONFLICT (residential_complex_id, unit_label)
         DO UPDATE SET updated_at = NOW()
@@ -81,7 +80,6 @@ export class FinanceRepository {
             ARRAY_AGG(full_name ORDER BY full_name ASC) AS residents
           FROM residents
           WHERE residential_complex_id = $1
-            AND status = 'Activo'
           GROUP BY residential_complex_id, unit_label
         ),
         movement_totals AS (
